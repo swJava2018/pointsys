@@ -1,4 +1,4 @@
-## Point System
+# Point System
 
 무료 포인트 시스템을 위한 기능을 제공하는 API 서버입니다.  
 포인트 적립/취소 가능을 위한 <ins>관리자 API</ins>와 포인트 사용/취소 기능을 위한 <ins>사용자 API</ins>를 제공합니다.
