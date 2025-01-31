@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    platform: h2
+  sql:
+    init:
+      schema-locations: classpath:db/schema.sql  # 데이터베이스 초기화 스크립트 (테이블 생성 등)
+      data-locations: classpath:db/data.sql      # 데이터 삽입 스크립트 (초기 데이터)
+      enabled: true  # SQL 초기화 실행 여부 설정
+  jpa:
+    hibernate:
+      ddl-auto: none  # Hibernate 가 자동으로 테이블을 생성하지 않도록 설정
+    properties:
+      hibernate:
+        format_sql: true  # SQL 로그 출력
+        show_sql: true    # SQL 포맷을 읽기 쉽게 출력
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG # Hibernate SQL 출력
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE # 파라미터 바인딩 값 로그
+    org.springframework.jdbc.core: DEBUG  # JDBC 로그 활성화
+    org.springframework.jdbc.datasource.DataSourceTransactionManager: DEBUG # 트랜잭션 로그

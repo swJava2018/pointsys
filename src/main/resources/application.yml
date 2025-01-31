@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    platform: h2
+  sql:
+    init:
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8080
