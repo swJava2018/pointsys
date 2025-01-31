@@ -36,6 +36,8 @@ project
 ```
 
 ## Model
+ERD는 `src/main/resources/erd.png` 파일을 참조할 수 있습니다.
+
 * `user`: 계정(이용자, 관리자)
 * `user_point_limit`: 계정별 포인트 제한 정보
 * `point_spec`: 포인트 정책
