@@ -22,7 +22,7 @@
 * Gradle
 
 ## Package Structure
-src/main/java/com.klippass
+src/main/java/com.pointsys
 ```
 project
 |- config        : Spring 구성
